@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function(){
     console.log(songtitle)
     ye = new Audio(`mov/${songtitle}.wav`)
     ye.play()
-    body.style.cssText = `background-image: url(./gifs/${songtitle}.gif);`
+    body.style.cssText = `background-image: url("gifs/${songtitle}.gif");`
+    
     ye.onended = function(){stopSong()}
  }
 
