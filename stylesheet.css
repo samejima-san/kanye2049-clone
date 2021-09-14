@@ -16,6 +16,7 @@ body{
 .module{
     border: 3px solid rgb(44, 44, 44);
     border-radius: 1%;
+    overflow: hidden;
     width: 800px;
     height: 600px;
     background-color: white;
@@ -30,6 +31,7 @@ nav{
     width: 800px;
     height: 30px;
     border-bottom: 1px solid rgb(44, 44, 44);
+    background-color: rgb(238, 238, 238);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +63,7 @@ nav a{
 }
 
 nav a:hover{
+    cursor: pointer;
     background-color: black;
     color: white;
 }
@@ -89,6 +92,12 @@ nav a:hover{
     width: 90px;
     display: flex;
     justify-content: center;
+}
+
+#asukahidden{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .message{
@@ -144,11 +153,87 @@ nav a:hover{
     justify-content: center;
 }
 
+.dropdown{
+    display: block;
+    z-index: 1;
+    width: 200px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 150px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    font-size: medium;
+}
+
+.dropdown ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown ul li{
+    cursor: pointer;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.dropdown ul li:hover{
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.dropdown ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.unclickable{
+    color: grey;
+    pointer-events: none;
+}
+
 .apple{
-    display: none;
+    left: 1%;
+}
+
+.file{
+    left: 6%
+}
+
+.edit{
+    left: 13%;
 }
 
 .special{
-    display: none;
+    left: 21%;
 }
 
+.aboutscreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 400px;
+    height: 250px;
+    left: 23%;
+    top: 25%;
+}
+
+.aboutscreen p{
+    width: 230px;
+    text-align: center;
+    margin: 3% 0 0 1%;
+}
+
+.border-about{
+    border: 2px solid black;
+    padding: 19%;
+}

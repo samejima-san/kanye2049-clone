@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function(){
  let isPlaying = false
  function playSong(clicked){
     let songtitle = clicked.innerText.split("").reverse().slice(4).reverse().join("")
-    console.log(songtitle)
     ye = new Audio(`mov/${songtitle}.wav`)
     ye.play()
     body.style.cssText = `background-image: url("gifs/${songtitle}.gif");`

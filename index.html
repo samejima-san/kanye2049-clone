@@ -2,33 +2,59 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 </head>
 <body>
     <div class="module">
         <nav>
             <div class="box">
-                <a><img src="svg/apple.svg"/></a>
-                <a>File</a>
-                <a>Edit</a>
-                <a>Special</a>
+                <a id="navbutt"><span class="iconify" data-icon="ant-design:apple-filled"></span></a>
+                <a id="navbutt">File</a>
+                <a id="navbutt">Edit</a>
+                <a id="navbutt">Special</a>
             </div>
             <p id='time'>POTUS 6:25PM - Jul. 14, 2049</p>
         </nav>
 
-        <div class="apple">
+        <div class="dropdown apple">
             <ul>
-                <li>About</li>
-                <li>Battery</li>
-                <li>Restart</li>
+                <li id="about" >About</li>
+                <li class="unclickable">Battery</li>
+                <li id="restart">Restart</li>
             </ul>
         </div>
 
-        <div class="special">
+        <div class="dropdown file">
             <ul>
-                <li>Youtube</li>
-                <li>Twitter</li>
-                <li>Twitch</li>
+                <li class="unclickable">New</li>
+                <li class="unclickable">Open</li>
+                <li id="show">Show Hidden Files</li>
             </ul>
+        </div>
+
+        <div class="dropdown edit">
+            <ul>
+                <li class="unclickable">Undo</li>
+                <li class="unclickable">Copy</li>
+                <li class="unclickable">Paste</li>
+                <li class="unclickable">Print</li>
+            </ul>
+        </div>
+
+        <div class="dropdown special">
+            <ul>
+                <a target="_blank" href="https://www.youtube.com/channel/UC8hMb-H87jBzA0bp6Ck3GSQ"><li>Youtube</li></a>
+                <a target="_blank" href="https://twitter.com/saintthecoder"><li>Twitter</li></a>
+                <a target="_blank" href="https://www.twitch.tv/saintthecoder"><li>Twitch</li></a>
+            </ul>
+        </div>
+
+        <div class="aboutscreen" style="visibility: hidden;">
+            <div class="border-about">
+                <p>Mixtapes by ToastyDigital</p>
+                <p>Website design by starfennec</p>
+                <p>Clone site by SaintTheCoder</p>
+            </div>
         </div>
 
         <div class="canvas">
@@ -36,13 +62,20 @@
                 <img src="svg/blank-file.svg" alt="blank file svg"> 
                 <h5>EARTH.txt</h5>
             </div>
+
             <div class="icon" id="kanye">
                 <img src="svg/folder-icon.svg" alt="filled folder svg"> 
                 <h5>KANYE 2049</h5>
             </div>
+
             <div class="icon" id="yandhi">
                 <img src="svg/folder-icon.svg" alt="filled folder svg"> 
                 <h5>yandhi.zip</h5>
+            </div>
+
+            <div class="icon" id="hiddenfile" style="visibility: hidden;">
+                <span class="iconify" id="asukahidden" data-icon="teenyicons:mp4-outline"></span>
+                <h5>basedアスカちゃん.mp4</h5>
             </div>
         </div>
 
@@ -150,4 +183,5 @@
     </div>
     <script src="main.js"></script>
     <script src="functional.js"></script>
+    <script src="nav.js"></script>
 </body>
