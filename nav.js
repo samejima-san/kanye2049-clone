@@ -51,10 +51,19 @@ document.addEventListener('DOMContentLoaded', function(){
     let aboutmenu = document.querySelector('.aboutscreen')
     let hiddenfiles = document.querySelectorAll('#hiddenfile')
 
+    let asukavid = document.querySelector('.ytasuka')
+    let exitbutton = document.querySelector('.exit')
+
     about.addEventListener('click', event=>{ dropdown(aboutmenu)})
     show.addEventListener('click', event=>{ 
         if(show.innerHTML=== "Show Hidden Files"){ show.innerHTML = `Hide Hidden Files`}
         else{show.innerHTML = `Show Hidden Files`}
         dropdown(hiddenfiles[0])
     })
+
+    hiddenfiles[0].addEventListener('click', event =>{
+        dropdown(asukavid)
+    })
+
+    exitbutton.addEventListener('click', event=>{dropdown(asukavid)})
 })

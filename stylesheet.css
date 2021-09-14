@@ -237,3 +237,33 @@ nav a:hover{
     border: 2px solid black;
     padding: 19%;
 }
+
+.ytasuka{
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    top: 20%;
+}
+
+.based{
+    width: 498px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.based-nav{
+    width: 325px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exit{
+    background-color: red;
+    margin: 1%;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
