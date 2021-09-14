@@ -262,8 +262,9 @@ nav a:hover{
 
 .exit{
     background-color: red;
-    margin: 1%;
-    height: 20px;
-    width: 20px;
+    margin: 1.5%;
+    height: 15px;
+    width: 15px;
     border-radius: 100%;
+    cursor: pointer;
 }
