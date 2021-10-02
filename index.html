@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="module">
-        <nav>
+        <nav style="display: flex;"> <!-- change display to flex -->
             <div class="box">
                 <a id="navbutt"><span class="iconify" data-icon="ant-design:apple-filled"></span></a>
                 <a id="navbutt">File</a>
@@ -65,6 +65,32 @@
                 </div>
             </div>
             <iframe width="500" height="315" src="https://www.youtube.com/embed/YslK2C19s-k?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="bios">  <!--change to hidden -->
+            <div class="text">
+                <p>POTUS OS</p> <br><br><br>
+                <p>Copyright (c) 2049, 2050. All Rights Reserved</p><br>
+                <p>BIOS Version: 204908261 Release 3</p><br>
+                <p>Battery Pack: 100% OK</p><br>
+                <p>Memory Test: 16384K OK</p><br>
+                <p>Initialization USB Controllers... Done</p><br><br><br>
+                <p>Press <span class="blinking">Any Key</span> to boot system</p>
+            </div>
+        </div>
+
+        <div class="password-screen">
+            <div class="input-box">
+                <div class="outline">
+                    <p>Welcome Potus</p><br>
+                    <div class="password-hold">
+                        <label>Password</label>
+                        <input type="text" name="password" value=""/>
+                        <p style="font-size: 10px;">Forgot your password?</p><br>
+                        <button type="button">OK</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="canvas">
@@ -194,4 +220,6 @@
     <script src="main.js"></script>
     <script src="functional.js"></script>
     <script src="nav.js"></script>
+    <script src="screenmanagement.js"></script>
+
 </body>

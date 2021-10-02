@@ -66,4 +66,24 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     exitbutton.addEventListener('click', event=>{dropdown(asukavid)})
+
+    restart.addEventListener('click', ()=>{ location.reload()})
+
+
+
+    let blinking = document.querySelector('.blinking')
+    let bios = document.querySelector('.bios')
+
+    function blinkfunc(){
+        if(blinking.style.visibility === "hidden"){ blinking.style.visibility = "visible" }
+        else{ blinking.style.visibility = "hidden" }
+        if(bios.style.visibility != "hidden"){setTimeout(blinkfunc, 600)}
+        else{ 
+            blinking.style.visibility = "hidden"
+            blinking.style.display = "none"
+        }
+    }
+
+    blinkfunc()
+    
 })
