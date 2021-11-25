@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let file = document.querySelector('.file')
     let edit = document.querySelector('.edit')
     let dropdownsub = document.querySelectorAll('.dropdown')
+    let canvas = document.querySelector('.canvas')
     
     //adds the inline-style on our dropdown menus
     dropdownsub.forEach(element=>{element.style.visibility = "hidden"})
@@ -34,9 +35,15 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function dropdown(menu){
-        if(menu.style.visibility === "hidden"){ menu.style.visibility = "visible" }
-        else{ menu.style.visibility = "hidden" }
+        if(menu.style.visibility === "hidden"){
+             menu.style.visibility = "visible" 
+        }
+        else{ 
+            menu.style.visibility = "hidden"
+        }
     }
+        
+    
 
     function hideRemainingNavmenus(navbutton){
         for(let i = 0; i<dropdownsub.length; i++){
@@ -68,6 +75,8 @@ document.addEventListener('DOMContentLoaded', function(){
     exitbutton.addEventListener('click', event=>{dropdown(asukavid)})
 
     restart.addEventListener('click', ()=>{ location.reload()})
+
+    canvas.addEventListener('click', ()=>{hideRemainingNavmenus("all")})
 
 
 

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     let main = document.querySelector('.canvas')
     let nav = document.querySelector('nav')
     let navbuttons = document.querySelectorAll('#navbutt')
+    let hint = document.querySelector('#password-hint')
 
     //menus on start
     nav.style.display = "none"
@@ -14,13 +15,16 @@ document.addEventListener('DOMContentLoaded', () =>{
     
     //menus after the bios
     document.addEventListener('keypress', () =>{
-        bios.style.visibility = "hidden"
-        passwordscreen.style.visibility ="visible"
-        nav.style.display = "flex"
-        toggleUnclickableClass(navbuttons)
+        if(bios.style.visibility != "hidden"){
+            bios.style.visibility = "hidden"
+            passwordscreen.style.visibility ="visible"
+            nav.style.display = "flex"
+            toggleUnclickableClass(navbuttons)
+        }
     })
+
     //menus normally after password
-    let passwords = ["TLOP", "YEEZUS", "GRADUATION", "DONDA"]
+    let passwords = ["TLOP", "YEEZUS", "GRADUATION", "DONDA", "MBDTF", "YE", "KSG", "COLLEGE DROP OUT"]
     let input = document.querySelector('input')
     let button = document.querySelector('button')
     button.addEventListener('click', () => {
@@ -31,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () =>{
             main.style.display = "flex"
             toggleUnclickableClass(navbuttons)
         }
+        else{
+            input.style.border = "2px solid red"
+        }
     })
 
     function toggleUnclickableClass(buttons){
@@ -39,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () =>{
             else{element.classList.add("unclickable")}
         });
     }
+
+    hint.addEventListener('click', element=>{
+        hint.innerText = "The Greatest Album Of All Time."
+    })
     
 
 })

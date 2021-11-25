@@ -284,6 +284,12 @@ nav a:hover{
     top: 5%;
     width: 800px;
     height: 500px;
+    font-size: small;
+}
+
+.text p{
+    margin-top: 3px;
+    margin-left: 20px;
 }
 
 .password-screen{
@@ -329,6 +335,7 @@ nav a:hover{
     border: 2px solid black;
 }
 
-p #hint{
-    font-size: 2px;
+#password-hint{
+    font-size: 10px;
+    cursor: pointer;
 }
